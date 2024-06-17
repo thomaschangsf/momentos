@@ -2,4 +2,21 @@ numpy==1.23.5
 pandas==2.1.1
 keybert==0.7.0
 keyphrase-vectorizers==0.0.11
-#s
+#pip install -U 'spacy[apple]'
+#python -m spacy download en_core_web_sm
+spacy==3.7.0
+spacy-alignments==0.9.1
+spacy-legacy==3.0.12
+spacy-loggers==1.0.5
+spacy-transformers==1.3.1
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.0/en_core_web_sm-3.7.0-py3-none-any.whl#sha256=6215d71a3212690e9aec49408a27e3fe6ad7cd6c715476e93d70dc784041e93e
+scipy==1.10.1
+sentence-transformers==2.2.2
+sentencepiece==0.1.99
+nltk==3.8.1
+gensim==3.8.2
+pylru==1.2.1
+pydantic==2.4.2
+pydantic_core==2.10.1
+transformers==4.33.3
+huggingface-hub==0.17.3
