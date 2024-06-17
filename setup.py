@@ -4,9 +4,9 @@ from setuptools import setup, find_packages, find_namespace_packages
 from pathlib import Path
 this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
-
-with open(Path(this_directory, "requirements.txt")) as file:
-    required_packages = [ln.strip() for ln in file.readline()]
+def parse_requirements(filename):
+    with open(filename, 'r') as file:
+        return file.read().splitlines()
 
 docs_packages = ["mkdocs==1.3.0", "mkdocstrings==0.18.1"]
 
@@ -26,7 +26,7 @@ setup(
     author_email='thomas.w.wchang@gmail.com',
     url='https://github.com/thomaschangsf/moementos',  # Replace with your project's URL
     packages=find_namespace_packages(),  # Automatically find packages in the project; find_packages() vs find_namespace_packages()
-    install_requires=[required_packages],
+    install_requires=parse_requirements('requirements.txt'),
     extras_requires={
         "dev": static_analysis_packages
         + docs_packages
