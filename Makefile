@@ -31,7 +31,7 @@ static:
 .PHONY: style
 style:
 	black .
-	flake8 apps captum_kernel
+	flake8 apps momentos_kernel
 	isort .
 
 # Environment
