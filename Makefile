@@ -68,7 +68,7 @@ dvc:
 
 .PHONY: appJupyter
 appJupyter:
-	venv/bin/jupyter notebook
+	pushd apps/notebook && jupyter notebook &
 
 .PHONY: appStreamlit
 appStreamlit:
@@ -86,9 +86,9 @@ appWebGoPythonClient:
 
 .PHONY: dockerBuildImage
 dockerBuildImage:
-	docker rmi -f nebulakernel:latest
-	docker build -t nebulakernel:latest -f devops/Dockerfile .
-	docker images | grep nebulakernel
+	docker rmi -f momentos:latest
+	docker build -t momentos:latest -f devops/Dockerfile .
+	docker images | grep momentos
 
 .PHONY: dockerStartApps
 dockerStartApps:
