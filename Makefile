@@ -72,7 +72,7 @@ appJupyter:
 
 .PHONY: appStreamlit
 appStreamlit:
-	streamlit  run apps/streamlit/app_textgen_openai.py
+	streamlit run apps/streamlit/app_st.py
 
 .PHONY: appWeb
 appWeb:
